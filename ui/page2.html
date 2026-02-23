@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boka Pass - GymBooker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">&larr; Tillbaka till schemat</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-container">
+            <article class="details">
+                <h2>Morgon Yoga</h2>
+                <p><strong>Beskrivning:</strong> Ett lugnt pass för att starta dagen med rörlighet och fokus.</p>
+
+                <div class="status-box">
+                    <p id="spots-left">Lediga platser: 2</p>
+                    <p id="status-message">Fyll i dina uppgifter nedan och bekräfta bokningen.</p>
+                </div>
+            </article>
+
+            <hr>
+
+            <section class="membership-info">
+                <h3>Dina uppgifter</h3>
+                <form id="memberForm">
+                    <label for="memberId">Medlems-ID:</label>
+                    <input type="text" id="memberId" placeholder="MEM-123" required>
+
+                    <label for="membership">Medlemskapstyp:</label>
+                    <select id="membership">
+                        <option value="gold">Gold</option>
+                        <option value="silver">Silver</option>
+                        <option value="bronze">Bronze</option>
+                    </select>
+                </form>
+            </section>
+
+            <button id="bookBtn" class="btn btn-primary" onclick="bookClass()">Bekräfta bokning</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GymBooker AB</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+﻿/* Design-tokens (Variabler) för konsekvent utseende */
+:root {
+    --primary-color: #27ae60;
+    --primary-hover: #2ecc71;
+    --dark-bg: #1a1a1a;
+    --text-main: #333;
+    --text-light: #666;
+    --white: #ffffff;
+    --gray-bg: #f4f4f4;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Grundläggande reset och typografi */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--gray-bg);
+}
+
+/* Layout-containrar */
+header {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Komponenter: Kort (index.html) */
+.class-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.class-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Komponenter: Knappar (VG-justerad hierarki) */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+    .btn-primary:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+    }
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 2px solid #ccc;
+}
+
+    .btn-secondary:hover {
+        border-color: var(--text-main);
+        color: var(--text-main);
+        background-color: #eee;
+    }
+
+/* Förstärkt CTA-knapp för bokning (VG-val) */
+.btn-large {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 1.5rem auto;
+    display: block;
+    text-align: center;
+}
+
+/* Formulär (Krav för UI) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #eee;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Status-box för interaktion (page2.html) */
+.status-box {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-left: 5px solid var(--primary-color);
+    background: #eafaf1;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
